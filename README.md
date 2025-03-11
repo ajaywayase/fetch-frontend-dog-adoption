@@ -28,9 +28,6 @@ Using npm:
 
 npm install
 
-Or using yarn:
-
-yarn install
 
 ---
 
@@ -38,12 +35,14 @@ yarn install
 
 Using npm:
 
-npm start
+npm run dev
 
-Or using yarn:
+> The app will start at http://localhost:5173 (or another port if 5173 is occupied).
 
-yarn start
+## Create Build Locally
 
-> The app will start at http://localhost:3000.
+npm run build
+
+
 
 ---
