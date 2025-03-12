@@ -1,8 +1,8 @@
-# Fetch Frontend Dog Adoption
+## Fetch Frontend Dog Adoption
 
-This project is a **React.js Application** for a **Dog Adoption Platform**.  
-It was developed as a part of the **Fetch Frontend Take-Home Exercise**.
-
+This project is a React.js Application for a Dog Adoption Platform.  
+It was developed as a part of the Fetch Frontend Take-Home Exercise.
+Link to deployed version : https://fetch-frontend-dog-adoption.vercel.app/
 ---
 
 ## Prerequisites
