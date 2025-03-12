@@ -48,9 +48,20 @@ export function SearchPage() {
         const dogsData = await getDogs(searchResult.resultIds);
         setDogs(dogsData);
         setTotalPages(Math.ceil(searchResult.total / PAGE_SIZE));
-      } catch (error) {
-        toast.error("Failed to fetch dogs");
-        console.log("Failed to fetch dogs", error);
+      } catch (error: unknown) {
+        if (error instanceof Error && "response" in error) {
+          const err = error as { response?: { status: number } };
+
+          if (err?.response?.status === 401) {
+            toast.error(
+              "Please enable third party cookies on your browser and login again"
+            );
+            console.log("Enable third party cookies error", error);
+          }
+        } else {
+          toast.error("Failed to fetch dogs");
+          console.log("Failed to fetch dogs", error);
+        }
       } finally {
         setIsLoading(false);
       }
@@ -66,7 +77,7 @@ export function SearchPage() {
   // Handles match generation for favorite dogs shortlisted
   async function handleMatch() {
     if (favorites.size === 0) {
-      toast.error("Please select at least one dog");
+      toast.error("Please like at least one dog");
       return;
     }
 
