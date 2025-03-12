@@ -9,7 +9,7 @@ Link to deployed version : https://fetch-frontend-dog-adoption.vercel.app/
 
 Before running the project, ensure you have the following installed:
 
-- Node.js (v18+)
+- Node.js
 - npm (comes with Node.js) or yarn
 - Git
 - As we are using Httponly cookies for storing access token on Login we need to allow third party cookies on our browser where we want to run our website
